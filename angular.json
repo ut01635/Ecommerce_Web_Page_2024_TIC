@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "activity2": {
+    "OnlineShoping": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,14 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/activity2",
+            "outputPath": "dist/online-shoping",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -32,13 +27,14 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "node_modules/@ng-select/ng-select/themes/default.theme.css"
-
+              "@ng-select/ng-select/themes/default.theme.css"
             ],
-            "scripts": [ "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "activity2:build:production"
+              "buildTarget": "OnlineShoping:build:production"
             },
             "development": {
-              "buildTarget": "activity2:build:development"
+              "buildTarget": "OnlineShoping:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +83,6 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -95,7 +90,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -104,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "611e6c42-3daf-45d6-b75c-07edd4460c72"
+    "analytics": "38a82889-07d2-40fc-aed3-f21ebf2d5de6"
   }
 }
